@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript DOM Manipulation Example</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1 id="main-heading">Welcome to Dynamic Webpage</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#form-section">Register</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2>About HTML5</h2>
+    <figure>
+      <img
+        src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg"
+        alt="HTML5 logo representing modern web standards"
+        width="300"
+        loading="lazy"
+      />
+      <figcaption>Computer screen with HTML Code.</figcaption>
+    </figure>
+    <p id="dynamic-paragraph">This paragraph text will change when you click a button below.</p>
+    <button id="change-text-btn">Change Text Content</button>
+  </section>
+
+  <section id="form-section">
+    <h2>Registration Form</h2>
+    <form>
+      <label for="name">Full Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your full name"
+        autocomplete="name"
+        required
+      />
+
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        autocomplete="email"
+        required
+      />
+
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        autocomplete="new-password"
+        required
+      />
+
+      <label for="dob">Date of Birth:</label>
+      <input
+        type="date"
+        id="dob"
+        name="dob"
+        autocomplete="bday"
+        required
+      />
+
+      <label for="country">Country:</label>
+      <select id="country" name="country" required autocomplete="country-name">
+        <option value="">Select your country</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="Canada">Canada</option>
+        <option value="Australia">Australia</option>
+      </select>
+
+      <fieldset>
+        <legend>Gender:</legend>
+        <label for="gender-male">
+          <input type="radio" id="gender-male" name="gender" value="male" />
+          Male
+        </label>
+        <label for="gender-female">
+          <input type="radio" id="gender-female" name="gender" value="female" />
+          Female
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Interests:</legend>
+        <label for="interest-coding">
+          <input type="checkbox" id="interest-coding" name="interests" value="coding" />
+          Coding
+        </label>
+        <label for="interest-design">
+          <input type="checkbox" id="interest-design" name="interests" value="design" />
+          Design
+        </label>
+        <label for="interest-gaming">
+          <input type="checkbox" id="interest-gaming" name="interests" value="gaming" />
+          Gaming
+        </label>
+      </fieldset>
+
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <section id="dynamic-style-section">
+    <h2>Change Style Dynamically</h2>
+    <p id="style-paragraph">Click the button to change my color and font size!</p>
+    <button id="style-btn">Change Style</button>
+  </section>
+
+  <section id="add-remove-section">
+    <h2>Add/Remove Elements</h2>
+    <button id="add-element-btn">Add Element</button>
+    <button id="remove-element-btn">Remove Element</button>
+    <div id="container"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
